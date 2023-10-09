@@ -18,6 +18,7 @@ public class Login extends DriverSetupAndQuit {
 		driver.findElement(By.id("usernamefld")).sendKeys(login);
 		driver.findElement(By.id("passwordfld")).sendKeys(password);
 		driver.findElement(By.xpath("//button[@name=\"login\"]")).click();
+		//for debug purpose, should delete later
 		try {
 			TimeUnit.SECONDS.sleep(3);
 		} catch (InterruptedException e) {
