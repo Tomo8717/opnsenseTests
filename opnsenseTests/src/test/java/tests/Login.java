@@ -1,8 +1,7 @@
 package tests;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import common.DriverSetupAndQuit;
@@ -18,11 +17,9 @@ public class Login extends DriverSetupAndQuit {
 		driver.findElement(By.id("usernamefld")).sendKeys(login);
 		driver.findElement(By.id("passwordfld")).sendKeys(password);
 		driver.findElement(By.xpath("//button[@name=\"login\"]")).click();
-		//for debug purpose, should delete later
-		try {
-			TimeUnit.SECONDS.sleep(3);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		
+		String title = driver.getTitle();
+		Assert.assertEquals(title, "Dashboard | Lobby | OPNsense.localdomain");
+		
 	}
 }

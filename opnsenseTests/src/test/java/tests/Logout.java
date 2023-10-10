@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,11 +21,7 @@ public class Logout extends Login{
 		
 		logout.click();
 		
-		// for debug
-		try {
-			TimeUnit.SECONDS.sleep(1);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		String title = driver.getTitle();
+		Assert.assertEquals(title, "Login | OPNsense");
 	}
 }
