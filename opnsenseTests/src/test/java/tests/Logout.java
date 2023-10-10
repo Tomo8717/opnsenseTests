@@ -1,8 +1,6 @@
 package tests;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.openqa.selenium.WebElement;
