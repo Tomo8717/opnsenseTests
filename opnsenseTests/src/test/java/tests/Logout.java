@@ -7,8 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+import common.LoginAction;
 
-public class Logout extends Login{
+public class Logout extends LoginAction {
 	
 	@Test(groups="smoke")
 	public void logout() {

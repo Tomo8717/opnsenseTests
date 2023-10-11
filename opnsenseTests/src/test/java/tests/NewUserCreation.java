@@ -9,8 +9,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class NewUserCreation extends Login{
-	@Test(groups="regression")
+import common.LoginAction;
+
+public class NewUserCreation extends LoginAction {
+	@Test(groups={"regression","user_crud"}, priority = 1)
 	public void newUserCreation() {
 		
 		driver.get("https://192.168.23.128/system_usermanager.php");
@@ -26,6 +28,8 @@ public class NewUserCreation extends Login{
 		usernamefield.sendKeys("TestUser");
 		driver.findElement(By.id("passwordfld1")).sendKeys("pass");
 		driver.findElement(By.id("passwordfld2")).sendKeys("pass");
+		
+		driver.findElement(By.name("descr")).sendKeys("FullName");
 		
 		driver.findElement(By.xpath("//*[@id=\"notgroups\"]/option")).click();
 		driver.findElement(By.xpath("//*[@id=\"add_groups\"]/span")).click();
