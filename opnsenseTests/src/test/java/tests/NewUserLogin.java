@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import common.LoginAction;
 
 public class NewUserLogin extends LoginAction {
-	@Test(groups={"regression","user_crud"}, priority = 1)
+	@Test(groups={"regression","user_crud"}, priority = 2)
 	public void login() {
 		driver.manage().window().maximize();
 		driver.get(url);

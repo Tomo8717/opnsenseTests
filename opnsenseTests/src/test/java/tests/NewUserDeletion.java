@@ -23,18 +23,13 @@ public class NewUserDeletion extends LoginAction {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("modal-open")));
-        
-        WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(3));
-        wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class=\"bootstrap-dialog-footer-buttons\"]/button[2]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class=\"bootstrap-dialog-footer-buttons\"]/button[2]")));
 		
 		WebElement yesbutton = driver.findElement(By.xpath("//*[@class=\"bootstrap-dialog-footer-buttons\"]/button[2]"));
-		
 		yesbutton.click();
 		
 		driver.navigate().refresh();
-		
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(3));
-        wait3.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"iform2\"]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"iform2\"]")));
 		
 		Assert.assertEquals(driver.getPageSource().contains("FullName"), false);
 		//Checking that TestUser was deleted usermanager page
