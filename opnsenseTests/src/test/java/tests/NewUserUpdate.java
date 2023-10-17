@@ -16,7 +16,7 @@ public class NewUserUpdate extends LoginAction {
 	@Test(groups={"regression","user_crud"}, priority = 2)
 	public void newUserUpdate() {
 		
-		driver.get("https://192.168.23.128/system_usermanager.php");
+		driver.get(url+"system_usermanager.php");
 		driver.findElement(By.xpath("//*[@href=\"system_usermanager.php?act=edit&userid=1\"]")).click();
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));

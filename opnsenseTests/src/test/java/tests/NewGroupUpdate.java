@@ -13,7 +13,7 @@ import common.LoginAction;
 public class NewGroupUpdate extends LoginAction {
 	@Test(groups={"regression","group_crud"}, priority = 2)
 	public void newGroupUpdate() {
-		driver.get("https://192.168.23.128/system_groupmanager.php");
+		driver.get(url+"system_groupmanager.php");
 		//going to group manager
 		driver.findElement(By.xpath("//*[@href=\"system_groupmanager.php?act=edit&groupid=1\"]")).click();
 		//and clicking on edit button for our newly created group

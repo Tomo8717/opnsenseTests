@@ -15,7 +15,7 @@ public class NewUserCreation extends LoginAction {
 	@Test(groups={"regression","user_crud"}, priority = 1)
 	public void newUserCreation() {
 		
-		driver.get("https://192.168.23.128/system_usermanager.php");
+		driver.get(url+"system_usermanager.php");
 		//open user manager page
 		driver.findElement(By.xpath("//*[@id=\"iform2\"]/table/thead/tr/th[4]/a/i")).click();
 		//click on create new user button 

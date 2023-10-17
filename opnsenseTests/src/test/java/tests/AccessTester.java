@@ -15,7 +15,7 @@ public class AccessTester extends LoginAction {
 	
 	@Test(groups="smoke")
 	public void accessTesterNegative () {
-		driver.get("https://192.168.23.128/diag_authentication.php");
+		driver.get(url+"diag_authentication.php");
 		//getting to access tester page
 		driver.findElement(By.name("username")).sendKeys("root");
 		driver.findElement(By.name("password")).sendKeys("root");

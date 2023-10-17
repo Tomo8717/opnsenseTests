@@ -12,7 +12,7 @@ import common.LoginAction;
 public class PowerOff extends LoginAction {
 	@Test(groups="regression")
 	public void powerOff() {
-		driver.get("https://192.168.23.128/ui/core/halt");
+		driver.get(url+"ui/core/halt");
 		//going to big red button page
 		
 		driver.findElement(By.id("do-halt")).click();
@@ -23,7 +23,7 @@ public class PowerOff extends LoginAction {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		
 		try {
-			driver.get("https://192.168.23.128/");
+			driver.get(url);
 			wait.wait(20000);
 		} catch(Exception e) {
 			diditdie = true;

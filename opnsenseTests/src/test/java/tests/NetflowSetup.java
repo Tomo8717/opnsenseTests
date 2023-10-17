@@ -16,7 +16,7 @@ public class NetflowSetup extends LoginAction {
 	
 	@Test(groups="regression")
 	public void netflowSetup() {
-		driver.get("https://192.168.23.128/ui/diagnostics/netflow#");
+		driver.get(url+"ui/diagnostics/netflow#");
 		//getting to NetFlow page
 		
 		WebElement ddown = driver.findElement(By.id("netflow.capture.interfaces"));
@@ -37,7 +37,7 @@ public class NetflowSetup extends LoginAction {
 		//and saved. all that good and all, however we cannot confirm changes made on this page
 		//so we go to previously empty ui/diagnostics/networkinsight to see our netflow stats and if they are there at all
 		
-		driver.get("https://192.168.23.128/ui/diagnostics/networkinsight");
+		driver.get(url+"ui/diagnostics/networkinsight");
 		//network stats. until netflow is setup there is nothing there to see, only alert and url to netflow page.
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));

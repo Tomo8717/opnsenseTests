@@ -14,7 +14,7 @@ import common.LoginAction;
 public class NewUserDeletion extends LoginAction {
 	@Test(groups={"regression","user_crud"}, priority = 3)
 	public void newUserDeletion() {
-		driver.get("https://192.168.23.128/system_usermanager.php");
+		driver.get(url+"system_usermanager.php");
 		//go to usermanager page, user already created in NewUserCreation case
 		
 		driver.findElement(By.xpath("//*[@data-username=\"TestUser\"]")).click();

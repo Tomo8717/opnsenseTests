@@ -12,7 +12,7 @@ import common.LoginAction;
 public class RebootVM extends LoginAction {
 	@Test(groups="regression")
 	public void rebootVM() {
-		driver.get("https://192.168.23.128/ui/core/reboot");
+		driver.get(url+"ui/core/reboot");
 		//going to big red button page
 		
 		driver.findElement(By.id("do-reboot")).click();
@@ -20,6 +20,6 @@ public class RebootVM extends LoginAction {
 			
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"totals\"]")));
-		wait.until(ExpectedConditions.urlToBe("https://192.168.23.128/"));
+		wait.until(ExpectedConditions.urlToBe(url));
 	}
 }

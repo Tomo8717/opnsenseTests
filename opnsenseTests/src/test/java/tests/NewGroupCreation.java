@@ -13,7 +13,7 @@ import common.LoginAction;
 public class NewGroupCreation extends LoginAction {
 	@Test(groups={"regression","group_crud"}, priority = 1)
 	public void newGroupCreation() {
-		driver.get("https://192.168.23.128/system_groupmanager.php");
+		driver.get(url+"system_groupmanager.php");
 		//going to groups page 
 		
 		driver.findElement(By.xpath("//*[@data-original-title=\"Add\"]")).click();
