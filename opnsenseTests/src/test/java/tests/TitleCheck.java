@@ -79,7 +79,7 @@ public class TitleCheck extends LoginAction {
 	@Test(groups={"title_check","regression"})
 	public void systemServersTitle() {
 		driver.get(url+"system_authservers.php");
-		Assert.assertEquals(driver.getTitle(), "Groups | Access | System | OPNsense.localdomain");
+		Assert.assertEquals(driver.getTitle(), "Servers | Access | System | OPNsense.localdomain");
 	}
 	
 	@Test(groups={"title_check","regression"})
@@ -301,5 +301,160 @@ public class TitleCheck extends LoginAction {
 		driver.get(url+"ui/diagnostics/system/memory#memory");
 		Assert.assertEquals(driver.getTitle(), "Statistics | Diagnostics | System | OPNsense.localdomain");
 	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesLANTitle() {
+		driver.get(url+"interfaces.php?if=lan");
+		Assert.assertEquals(driver.getTitle(), "[LAN] | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesWANTitle() {
+		driver.get(url+"interfaces.php?if=wan");
+		Assert.assertEquals(driver.getTitle(), "[WAN] | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesAssignmentsTitle() {
+		driver.get(url+"interfaces_assign.php");
+		Assert.assertEquals(driver.getTitle(), "Assignments | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesOverviewTitle() {
+		driver.get(url+"status_interfaces.php");
+		Assert.assertEquals(driver.getTitle(), "Overview | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesSettingsTitle() {
+		driver.get(url+"system_advanced_network.php");
+		Assert.assertEquals(driver.getTitle(), "Settings | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesSettingsVIPsTitle() {
+		driver.get(url+"ui/interfaces/vip");
+		Assert.assertEquals(driver.getTitle(), "Settings | Virtual IPs | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesStatusVIPsTitle() {
+		driver.get(url+"ui/diagnostics/interface/vip");
+		Assert.assertEquals(driver.getTitle(), "Status | Virtual IPs | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesWirelessDevicesTitle() {
+		driver.get(url+"interfaces_wireless.php");
+		Assert.assertEquals(driver.getTitle(), "Devices | Wireless | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesWirelessLogFileTitle() {
+		driver.get(url+"ui/diagnostics/log/core/wireless");
+		Assert.assertEquals(driver.getTitle(), "Log File | Wireless | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesPtPDevicesTitle() {
+		driver.get(url+"interfaces_ppps.php");
+		Assert.assertEquals(driver.getTitle(), "Devices | Point-to-Point | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesPtPLogsTitle() {
+		driver.get(url+"ui/diagnostics/log/core/ppps");
+		Assert.assertEquals(driver.getTitle(), "Log File | Point-to-Point | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesOtherTypesBridgeTitle() {
+		driver.get(url+"interfaces_bridge.php");
+		Assert.assertEquals(driver.getTitle(), "Bridge | Other Types | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesOtherTypesGIFTitle() {
+		driver.get(url+"interfaces_gif.php");
+		Assert.assertEquals(driver.getTitle(), "GIF | Other Types | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesOtherTypesGRETitle() {
+		driver.get(url+"interfaces_gre.php");
+		Assert.assertEquals(driver.getTitle(), "GRE | Other Types | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesOtherTypesLAGGTitle() {
+		driver.get(url+"interfaces_lagg.php");
+		Assert.assertEquals(driver.getTitle(), "LAGG | Other Types | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesOtherTypesLoopbackTitle() {
+		driver.get(url+"ui/interfaces/loopback");
+		Assert.assertEquals(driver.getTitle(), "Loopback | Other Types | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesOtherTypesVLANTitle() {
+		driver.get(url+"ui/interfaces/vlan");
+		Assert.assertEquals(driver.getTitle(), "VLAN | Other Types | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesOtherTypesVXLANTitle() {
+		driver.get(url+"ui/interfaces/vxlan");
+		Assert.assertEquals(driver.getTitle(), "VXLAN | Other Types | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesDiagnosticsARPTitle() {
+		driver.get(url+"ui/diagnostics/interface/arp");
+		Assert.assertEquals(driver.getTitle(), "ARP Table | Diagnostics | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesDiagnosticsDNSTitle() {
+		driver.get(url+"ui/diagnostics/dns_diagnostics");
+		Assert.assertEquals(driver.getTitle(), "DNS Lookup | Diagnostics | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesDiagnosticsNDPTitle() {
+		driver.get(url+"ui/diagnostics/interface/ndp");
+		Assert.assertEquals(driver.getTitle(), "NDP Table | Diagnostics | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesDiagnosticsNetstatTitle() {
+		driver.get(url+"ui/diagnostics/interface/netstat#interfaces");
+		Assert.assertEquals(driver.getTitle(), "Netstat | Diagnostics | Interfaces | OPNsense.localdomain");
+	}
 
+	@Test(groups={"title_check","regression"})
+	public void interfacesDiagnosticsPacketCaptureTitle() {
+		driver.get(url+"ui/diagnostics/packet_capture");
+		Assert.assertEquals(driver.getTitle(), "Packet Capture | Diagnostics | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesDiagnosticsPingTitle() {
+		driver.get(url+"diag_ping.php");
+		Assert.assertEquals(driver.getTitle(), "Ping | Diagnostics | Interfaces | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void interfacesDiagnosticsPortProbeTitle() {
+		driver.get(url+"diag_testport.php");
+		Assert.assertEquals(driver.getTitle(), "Port Probe | Diagnostics | Interfaces | OPNsense.localdomain");
+	}
+
+	@Test(groups={"title_check","regression"})
+	public void interfacesDiagnosticsTraceRouteTitle() {
+		driver.get(url+"diag_traceroute.php");
+		Assert.assertEquals(driver.getTitle(), "Trace Route | Diagnostics | Interfaces | OPNsense.localdomain");
+	}
 }
