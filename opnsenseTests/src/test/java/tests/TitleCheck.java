@@ -457,4 +457,491 @@ public class TitleCheck extends LoginAction {
 		driver.get(url+"diag_traceroute.php");
 		Assert.assertEquals(driver.getTitle(), "Trace Route | Diagnostics | Interfaces | OPNsense.localdomain");
 	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallAliasesTitle() {
+		driver.get(url+"ui/firewall/alias");
+		Assert.assertEquals(driver.getTitle(), "Aliases | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallCategoriesTitle() {
+		driver.get(url+"ui/firewall/category");
+		Assert.assertEquals(driver.getTitle(), "Categories | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallGroupsTitle() {
+		driver.get(url+"interfaces_groups.php");
+		Assert.assertEquals(driver.getTitle(), "Groups | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallPortNatTitle() {
+		driver.get(url+"firewall_nat.php");
+		Assert.assertEquals(driver.getTitle(), "Port Forward | NAT | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallNat1t1Title() {
+		driver.get(url+"firewall_nat_1to1.php");
+		Assert.assertEquals(driver.getTitle(), "One-to-One | NAT | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallNatOutboundTitle() {
+		driver.get(url+"firewall_nat_out.php");
+		Assert.assertEquals(driver.getTitle(), "Outbound | NAT | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallNatNPTv6Title() {
+		driver.get(url+"firewall_nat_npt.php");
+		Assert.assertEquals(driver.getTitle(), "NPTv6 | NAT | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallFloatingTitle() {
+		driver.get(url+"firewall_rules.php?if=FloatingRules");
+		Assert.assertEquals(driver.getTitle(), "Floating | Rules | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallLANTitle() {
+		driver.get(url+"firewall_rules.php?if=lan");
+		Assert.assertEquals(driver.getTitle(), "LAN | Rules | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallLoopbackTitle() {
+		driver.get(url+"firewall_rules.php?if=lo0");
+		Assert.assertEquals(driver.getTitle(), "Loopback | Rules | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallWANTitle() {
+		driver.get(url+"firewall_rules.php?if=wan");
+		Assert.assertEquals(driver.getTitle(), "WAN | Rules | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallShaperTitle() {
+		driver.get(url+"ui/trafficshaper#pipes");
+		Assert.assertEquals(driver.getTitle(), "Shaper | Firewall | OPNsense.localdomain");
+		
+		driver.get(url+"ui/trafficshaper#queues");
+		Assert.assertEquals(driver.getTitle(), "Shaper | Firewall | OPNsense.localdomain");
+		
+		driver.get(url+"ui/trafficshaper#rules");
+		Assert.assertEquals(driver.getTitle(), "Shaper | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallShaperStatusTitle() {
+		driver.get(url+"ui/trafficshaper/service/statistics");
+		Assert.assertEquals(driver.getTitle(), "Status | Shaper | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallSettingsAdvancedTitle() {
+		driver.get(url+"system_advanced_firewall.php");
+		Assert.assertEquals(driver.getTitle(), "Advanced | Settings | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallSettingsNormalizationTitle() {
+		driver.get(url+"firewall_scrub.php");
+		Assert.assertEquals(driver.getTitle(), "Normalization | Settings | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallSettingsSchedulesTitle() {
+		driver.get(url+"firewall_schedule.php");
+		Assert.assertEquals(driver.getTitle(), "Schedules | Settings | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallLogsGeneralTitle() {
+		driver.get(url+"ui/diagnostics/log/core/firewall");
+		Assert.assertEquals(driver.getTitle(), "General | Log Files | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallLogsLiveTitle() {
+		driver.get(url+"ui/diagnostics/firewall/log");
+		Assert.assertEquals(driver.getTitle(), "Live View | Log Files | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallLogsOverviewTitle() {
+		driver.get(url+"ui/diagnostics/firewall/stats");
+		Assert.assertEquals(driver.getTitle(), "Overview | Log Files | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallLogsPlainviewTitle() {
+		driver.get(url+"ui/diagnostics/log/core/filter");
+		Assert.assertEquals(driver.getTitle(), "Plain View | Log Files | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDiagnosticsAliasesTitle() {
+		driver.get(url+"ui/firewall/alias_util/");
+		Assert.assertEquals(driver.getTitle(), "Aliases | Diagnostics | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDiagnosticsSessionsTitle() {
+		driver.get(url+"ui/diagnostics/firewall/pf_top");
+		Assert.assertEquals(driver.getTitle(), "Sessions | Diagnostics | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDiagnosticsStatesTitle() {
+		driver.get(url+"ui/diagnostics/firewall/states");
+		Assert.assertEquals(driver.getTitle(), "States | Diagnostics | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDiagnosticsStatisticsTitle() {
+		driver.get(url+"ui/diagnostics/firewall/statistics#info");
+		Assert.assertEquals(driver.getTitle(), "Statistics | Diagnostics | Firewall | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallIPsecConnectionsTitle() {
+		driver.get(url+"ui/ipsec/connections");
+		Assert.assertEquals(driver.getTitle(), "Connections [new] | IPsec | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallIPsecTunnelTitle() {
+		driver.get(url+"ui/ipsec/tunnels");
+		Assert.assertEquals(driver.getTitle(), "Tunnel Settings | IPsec | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallIPsecMobileTitle() {
+		driver.get(url+"vpn_ipsec_mobile.php");
+		Assert.assertEquals(driver.getTitle(), "Mobile Clients | IPsec | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallIPsecKeysTitle() {
+		driver.get(url+"ui/ipsec/pre_shared_keys/");
+		Assert.assertEquals(driver.getTitle(), "Pre-Shared Keys | IPsec | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallIPsecKeysPairsTitle() {
+		driver.get(url+"ui/ipsec/key-pairs");
+		Assert.assertEquals(driver.getTitle(), "Key Pairs | IPsec | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallIPsecAdvancedSettingsTitle() {
+		driver.get(url+"vpn_ipsec_settings.php");
+		Assert.assertEquals(driver.getTitle(), "Advanced Settings | IPsec | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallIPsecStatusOverviewTitle() {
+		driver.get(url+"ui/ipsec/sessions");
+		Assert.assertEquals(driver.getTitle(), "Status Overview | IPsec | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallIPsecStatusLeaseTitle() {
+		driver.get(url+"ui/ipsec/leases");
+		Assert.assertEquals(driver.getTitle(), "Lease Status | IPsec | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDiagnosticsSecurityAssociationDatabaseTitle() {
+		driver.get(url+"ui/ipsec/sad");
+		Assert.assertEquals(driver.getTitle(), "Security Association Database | IPsec | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDiagnosticsSPDTitle() {
+		driver.get(url+"ui/ipsec/spd");
+		Assert.assertEquals(driver.getTitle(), "Security Policy Database | IPsec | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDiagnosticsVTITitle() {
+		driver.get(url+"ui/ipsec/vti");
+		Assert.assertEquals(driver.getTitle(), "Virtual Tunnel Interfaces | IPsec | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDiagnosticsLogsTitle() {
+		driver.get(url+"ui/diagnostics/log/core/ipsec");
+		Assert.assertEquals(driver.getTitle(), "Log File | IPsec | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallOpenVPNServersTitle() {
+		driver.get(url+"vpn_openvpn_server.php");
+		Assert.assertEquals(driver.getTitle(), "Servers | OpenVPN | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallOpenVPNClientsTitle() {
+		driver.get(url+"vpn_openvpn_client.php");
+		Assert.assertEquals(driver.getTitle(), "Clients | OpenVPN | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallOpenVPNCSOTitle() {
+		driver.get(url+"vpn_openvpn_csc.php");
+		Assert.assertEquals(driver.getTitle(), "Client Specific Overrides | OpenVPN | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallOpenVPNClientExportTitle() {
+		driver.get(url+"ui/openvpn/export");
+		Assert.assertEquals(driver.getTitle(), "Client Export | OpenVPN | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallOpenVPNConnectionStatusTitle() {
+		driver.get(url+"status_openvpn.php");
+		Assert.assertEquals(driver.getTitle(), "Connection Status | OpenVPN | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallOpenVPNLogsTitle() {
+		driver.get(url+"ui/diagnostics/log/core/openvpn");
+		Assert.assertEquals(driver.getTitle(), "Log File | OpenVPN | VPN | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallCPortalAdministrationTitle() {
+		driver.get(url+"ui/captiveportal");
+		Assert.assertEquals(driver.getTitle(), "Administration | Captive Portal | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallCPortalSessionsTitle() {
+		driver.get(url+"ui/captiveportal/session");
+		Assert.assertEquals(driver.getTitle(), "Sessions | Captive Portal | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallCPortalVouchersTitle() {
+		driver.get(url+"ui/captiveportal/voucher");
+		Assert.assertEquals(driver.getTitle(), "Vouchers | Captive Portal | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallCPortalLogsTitle() {
+		driver.get(url+"ui/diagnostics/log/core/portalauth");
+		Assert.assertEquals(driver.getTitle(), "Log File | Captive Portal | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDHCPv4RelayTitle() {
+		driver.get(url+"services_dhcp_relay.php");
+		Assert.assertEquals(driver.getTitle(), "Relay | DHCPv4 | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDHCPv4LeasesTitle() {
+		driver.get(url+"status_dhcp_leases.php");
+		Assert.assertEquals(driver.getTitle(), "Leases | DHCPv4 | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDHCPv4LogsTitle() {
+		driver.get(url+"ui/diagnostics/log/core/dhcpd");
+		Assert.assertEquals(driver.getTitle(), "Log File | DHCPv4 | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDHCPv6RelayTitle() {
+		driver.get(url+"services_dhcpv6_relay.php");
+		Assert.assertEquals(driver.getTitle(), "Relay | DHCPv6 | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDHCPv6LeasesTitle() {
+		driver.get(url+"status_dhcpv6_leases.php");
+		Assert.assertEquals(driver.getTitle(), "Leases | DHCPv6 | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDnsmasqDNSSettingsTitle() {
+		driver.get(url+"services_dnsmasq.php");
+		Assert.assertEquals(driver.getTitle(), "Settings | Dnsmasq DNS | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallDnsmasqDNSLogsTitle() {
+		driver.get(url+"ui/diagnostics/log/core/dnsmasq");
+		Assert.assertEquals(driver.getTitle(), "Log File | Dnsmasq DNS | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallIntrusionDetectionAdministrationTitle() {
+		driver.get(url+"ui/ids");
+		Assert.assertEquals(driver.getTitle(), "Administration | Intrusion Detection | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallIntrusionDetectionPolicyTitle() {
+		driver.get(url+"ui/ids/policy");
+		Assert.assertEquals(driver.getTitle(), "Policy | Intrusion Detection | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallIntrusionDetectionLogsTitle() {
+		driver.get(url+"ui/diagnostics/log/core/suricata");
+		Assert.assertEquals(driver.getTitle(), "Log File | Intrusion Detection | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallMonitSettingsTitle() {
+		driver.get(url+"ui/monit");
+		Assert.assertEquals(driver.getTitle(), "Settings | Monit | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallMonitStatusTitle() {
+		driver.get(url+"ui/monit/status");
+		Assert.assertEquals(driver.getTitle(), "Status | Monit | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallMonitLogsTitle() {
+		driver.get(url+"ui/diagnostics/log/core/monit");
+		Assert.assertEquals(driver.getTitle(), "Log File | Monit | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallNetworkTimeGeneralTitle() {
+		driver.get(url+"services_ntpd.php");
+		Assert.assertEquals(driver.getTitle(), "General | Network Time | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallNetworkTimeGPSTitle() {
+		driver.get(url+"services_ntpd_gps.php");
+		Assert.assertEquals(driver.getTitle(), "GPS | Network Time | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallNetworkTimePPSTitle() {
+		driver.get(url+"services_ntpd_pps.php");
+		Assert.assertEquals(driver.getTitle(), "PPS | Network Time | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallNetworkTimeStatusTitle() {
+		driver.get(url+"status_ntpd.php");
+		Assert.assertEquals(driver.getTitle(), "Status | Network Time | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallNetworkTimeLogsTitle() {
+		driver.get(url+"ui/diagnostics/log/core/ntpd");
+		Assert.assertEquals(driver.getTitle(), "Log File | Network Time | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallServicesOpenDNSTitle() {
+		driver.get(url+"services_opendns.php");
+		Assert.assertEquals(driver.getTitle(), "OpenDNS | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallUnboundDNSGeneralTitle() {
+		driver.get(url+"services_unbound.php");
+		Assert.assertEquals(driver.getTitle(), "General | Unbound DNS | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallUnboundDNSOverridesTitle() {
+		driver.get(url+"ui/unbound/overrides/");
+		Assert.assertEquals(driver.getTitle(), "Overrides | Unbound DNS | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallUnboundDNSAdvancedTitle() {
+		driver.get(url+"ui/unbound/advanced/");
+		Assert.assertEquals(driver.getTitle(), "Advanced | Unbound DNS | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallUnboundDNSAccessListsTitle() {
+		driver.get(url+"services_unbound_acls.php");
+		Assert.assertEquals(driver.getTitle(), "Access Lists | Unbound DNS | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallUnboundDNSBlocklistTitle() {
+		driver.get(url+"ui/unbound/dnsbl/index");
+		Assert.assertEquals(driver.getTitle(), "Blocklist | Unbound DNS | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallUnboundDNSQueryTitle() {
+		driver.get(url+"ui/unbound/forward");
+		Assert.assertEquals(driver.getTitle(), "Query Forwarding | Unbound DNS | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallUnboundDNSDNSoverTLSTitle() {
+		driver.get(url+"ui/unbound/dot");
+		Assert.assertEquals(driver.getTitle(), "DNS over TLS | Unbound DNS | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallUnboundDNSStatisticsTitle() {
+		driver.get(url+"ui/unbound/stats");
+		Assert.assertEquals(driver.getTitle(), "Statistics | Unbound DNS | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallUnboundDNSLogsTitle() {
+		driver.get(url+"ui/diagnostics/log/core/resolver");
+		Assert.assertEquals(driver.getTitle(), "Log File | Unbound DNS | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallWebProxyAdministrationTitle() {
+		driver.get(url+"ui/proxy");
+		Assert.assertEquals(driver.getTitle(), "Administration | Web Proxy | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallWebProxyCacheLogTitle() {
+		driver.get(url+"ui/diagnostics/log/squid/cache");
+		Assert.assertEquals(driver.getTitle(), "Cache Log | Web Proxy | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallWebProxyAccessLogTitle() {
+		driver.get(url+"ui/diagnostics/log/squid/access");
+		Assert.assertEquals(driver.getTitle(), "Access Log | Web Proxy | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void firewallWebProxyStoreLogTitle() {
+		driver.get(url+"ui/diagnostics/log/squid/store");
+		Assert.assertEquals(driver.getTitle(), "Store Log | Web Proxy | Services | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void powerRebootTitle() {
+		driver.get(url+"ui/core/reboot");
+		Assert.assertEquals(driver.getTitle(), "Reboot | Power | OPNsense.localdomain");
+	}
+	
+	@Test(groups={"title_check","regression"})
+	public void powerPowerOffTitle() {
+		driver.get(url+"ui/core/halt");
+		Assert.assertEquals(driver.getTitle(), "Power Off | Power | OPNsense.localdomain");
+	}
+	
 }
