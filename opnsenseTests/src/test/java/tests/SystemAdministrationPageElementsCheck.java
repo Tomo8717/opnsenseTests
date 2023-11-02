@@ -8,7 +8,7 @@ import org.testng.Assert;
 import common.LoginAction;
 
 public class SystemAdministrationPageElementsCheck extends LoginAction {
-	@Test
+	@Test(groups = {"regression","system administration page"})
 	public void webGUICheck() {
 		driver.get(url+"system_advanced_admin.php");
 		//check if main interactable elements of the Web GUI section of the page do indeed exist
@@ -30,7 +30,7 @@ public class SystemAdministrationPageElementsCheck extends LoginAction {
 		Assert.assertEquals(driver.findElements(By.name("nohttpreferercheck")).isEmpty(), false);
 	}
 	
-	@Test
+	@Test(groups = {"regression","system administration page"})
 	public void secureShellCheck() {
 		driver.get(url+"system_advanced_admin.php");
 		driver.findElement(By.id("show-advanced-cryptocryptobtn")).sendKeys(Keys.ENTER);
@@ -48,7 +48,7 @@ public class SystemAdministrationPageElementsCheck extends LoginAction {
 		Assert.assertEquals(driver.findElements(By.name("ssh-keysig[]")).isEmpty(), false);
 	}
 	
-	@Test
+	@Test(groups = {"regression","system administration page"})
 	public void consoleCheck() {
 		driver.get(url+"system_advanced_admin.php");
 		//check if main interactable elements of the Console section of the page do exist
@@ -60,14 +60,14 @@ public class SystemAdministrationPageElementsCheck extends LoginAction {
 		Assert.assertEquals(driver.findElements(By.name("disableconsolemenu")).isEmpty(), false);
 	}
 	
-	@Test
+	@Test(groups = {"regression","system administration page"})
 	public void shelleCheck() {
 		driver.get(url+"system_advanced_admin.php");
 		//check if main interactable element (which is the one and only text field for timeout) of the Shell section of the page do exist
 		Assert.assertEquals(driver.findElements(By.name("autologout")).isEmpty(), false);
 	}
 	
-	@Test
+	@Test(groups = {"regression","system administration page"})
 	public void authenticationCheck() {
 		driver.get(url+"system_advanced_admin.php");
 		//check if main interactable elements of the Authentication section of the page do exist
@@ -78,7 +78,7 @@ public class SystemAdministrationPageElementsCheck extends LoginAction {
 		Assert.assertEquals(driver.findElements(By.name("user_allow_gen_token[]")).isEmpty(), false);
 	}
 	
-	@Test
+	@Test(groups = {"regression","system administration page"})
 	public void deploymentCheck() {
 		driver.get(url+"system_advanced_admin.php");
 		//check if main interactable element (which is, again, the one and only element - dropdown select) of the Deployment section of the page do exist
