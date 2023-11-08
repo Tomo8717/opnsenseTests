@@ -18,7 +18,7 @@ public static WebDriver driver = null;
 	
 	@BeforeSuite
 	public void launchBrowser () {
-		//WebDriverManager.chromedriver().clearDriverCache().setup();
+		WebDriverManager.chromedriver().clearDriverCache().setup();
 		//WebDriverManager.chromedriver().clearResolutionCache().setup();
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();	
